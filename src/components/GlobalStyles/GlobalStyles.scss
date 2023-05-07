@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #2a213a;
+  --bg-layout: #170f23;
+  --navigation-text: #dadada;
+  --navigation-hover: #fff;
+  --bg-sidebar: hsla(0, 0%, 100%, 0.05);
+  --bg-alpha: hsla(0, 0%, 100%, 0.1);
+  --color-purple: #9b4de0;
+  --border-primary: hsla(0, 0%, 100%, 0.1);
+}
+
+html {
+  font-size: 55%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+
+  a {
+    color: inherit;
+  }
+
+  &.nav-item {
+    border-left: 3px solid transparent;
+  }
+
+  &.active {
+    background-color: var(--bg-alpha);
+    border-color: var(--color-purple);
+    color: var(--navigation-hover);
+  }
+
+  &:hover a {
+    color: var(--navigation-hover);
+  }
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-layout {
+  background-color: var(--bg-layout);
+  height: 100vh;
+}
+
+.wrapper-sidebar {
+  background-color: var(--bg-sidebar);
+  color: var(--navigation-text);
+}
+
+.line-sidebar {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px solid var(--border-primary)
+  }
+}
+
+.add-playlist {
+  border-top: 1px solid var(--border-primary);
+
+  & button {
+    color: var(--navigation-text)
+  }
+}
