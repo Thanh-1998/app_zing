@@ -2,3 +2,8 @@ export { default as IconLogo } from './IconLogo';
 export { default as IconPlay } from './IconPlay';
 export { default as IconLive } from './IconLive';
 export { default as IconCreate } from './IconCreate';
+export { default as IconArrow } from './IconArow';
+export { default as IconSearch } from './IconSearch';
+export { default as IconDesktop } from './IconDesktop';
+export { default as IconVip } from './IconVip';
+export { default as IconSetting } from './IconSettings';
