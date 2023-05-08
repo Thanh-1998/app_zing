@@ -7,3 +7,4 @@ export { default as IconSearch } from './IconSearch';
 export { default as IconDesktop } from './IconDesktop';
 export { default as IconVip } from './IconVip';
 export { default as IconSetting } from './IconSettings';
+export { default as IconTrend } from './IconTrend';

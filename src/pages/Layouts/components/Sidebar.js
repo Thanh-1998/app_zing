@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { StyledSidebar } from './Styles';
+import { StyledSidebar } from '../DefaultLayout/Styles';
 import { IconCreate, IconLive, IconLogo, IconPlay } from '~/components/Icons';
 import { ButtonIcon } from '~/components/CustomForm';
 

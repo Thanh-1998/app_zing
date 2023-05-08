@@ -1,6 +1,5 @@
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 
 function DefaultLayout({ children }) {
   return (
@@ -8,10 +7,8 @@ function DefaultLayout({ children }) {
       <Sidebar />
       <Header />
 
-      <main className="container">
-        <div className="content">
-          {children}
-        </div>
+      <main className="container main">
+        <div className="content">{children}</div>
       </main>
     </>
   );

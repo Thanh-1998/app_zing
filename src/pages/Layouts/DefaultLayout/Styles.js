@@ -69,7 +69,7 @@ const StyledHeader = styled.header`
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0 59px;
+  padding: 0 var(--padding-section);
   & .header {
     width: 100%;
     display: flex;
@@ -83,18 +83,46 @@ const StyledHeader = styled.header`
       margin-right: 20px;
     }
     .header-search {
+      position: relative;
       width: 100%;
       max-width: 440px;
+      & [data-tippy-root] {
+        width: 100%;
+      }
       & .wrap-search {
         height: 40px;
         display: flex;
         align-items: center;
         padding: 0 8px;
-        border-radius: 20px;
         background-color: var(--bg-alpha);
         & input {
           width: 100%;
           height: 100%;
+        }
+        &.focus-search {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          background-color: var(--bg-purple);
+        }
+      }
+      & .wrap-search:not(.focus-search) {
+        border-radius: 20px;
+      }
+      & .wrap-result {
+        position: absolute;
+        width: 100%;
+        font-size: 14px;
+        top: -10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+        color: var(--text-primary);
+        .result-suggest {
+          padding: 13px 10px;
+          .result-heading {
+            margin: 0;
+            padding: 0 10px 8px;
+          }
         }
       }
     }
@@ -116,6 +144,23 @@ const StyledHeader = styled.header`
         filter: brightness(0.9);
       }
     }
+    .header-settings {
+      position: relative;
+      & [data-tippy-root] {
+        width: 100%;
+      }
+      .wrap-settings {
+        position: absolute;
+        right: 0;
+        border-radius: 8px;
+        padding-top: 2px;
+        overflow: hidden;
+        color: var(--navigation-text);
+      }
+      .settings-list {
+        padding: 6px;
+      }
+    }
     & .icon-header {
       display: flex;
       align-items: center;
@@ -123,16 +168,28 @@ const StyledHeader = styled.header`
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      margin-left: 10px;
+      margin-left: 12px;
     }
     & .header-login {
-      margin-left: 10px;
+      margin-left: 12px;
       background: var(--color-purple);
       & span {
         font-weight: 600;
         color: #fff;
       }
     }
+  }
+  .popper-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--bg-alpha);
+    }
+  }
+  .popper-name {
+    margin-left: 10px;
   }
 `;
 
