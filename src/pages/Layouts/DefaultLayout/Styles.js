@@ -69,6 +69,7 @@ const StyledHeader = styled.header`
   height: 70px;
   display: flex;
   align-items: center;
+  z-index: 10;
   padding: 0 var(--padding-section);
   & .header {
     width: 100%;
