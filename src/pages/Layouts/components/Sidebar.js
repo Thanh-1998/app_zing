@@ -206,7 +206,7 @@ function Sidebar() {
                   {menu.icon}
                   <span>{menu.menu_name}</span>
 
-                  {menu.play == 1 && (
+                  {menu.play === 1 && (
                     <ButtonIcon className="nav-button">
                       <IconPlay />
                     </ButtonIcon>
@@ -231,7 +231,7 @@ function Sidebar() {
                 <Link to={slug} className="nav-link">
                   {icon}
                   <span>{menu_name}</span>
-                  {play == 1 && (
+                  {play === 1 && (
                     <ButtonIcon className="nav-button">
                       <IconPlay />
                     </ButtonIcon>

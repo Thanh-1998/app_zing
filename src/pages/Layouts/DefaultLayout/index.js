@@ -8,7 +8,7 @@ function DefaultLayout({ children }) {
       <Header />
 
       <main className="container main">
-        <div className="content">{children}</div>
+        <div className="wrapper content">{children}</div>
       </main>
     </>
   );

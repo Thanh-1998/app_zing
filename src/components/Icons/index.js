@@ -8,3 +8,5 @@ export { default as IconDesktop } from './IconDesktop';
 export { default as IconVip } from './IconVip';
 export { default as IconSetting } from './IconSettings';
 export { default as IconTrend } from './IconTrend';
+export { default as IconMore } from './IconMore';
+export { default as IconDots } from './IconDots';
