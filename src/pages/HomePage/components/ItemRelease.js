@@ -8,6 +8,12 @@ function ItemRelease({ item }) {
           <figure className="img-song is60x60">
             <img src={item.thumbnail} alt={item.artists_names} />
           </figure>
+
+          <div className="action-song">
+            <div className="box-action">
+              <button className="action-play"></button>
+            </div>
+          </div>
         </div>
 
         <div className="item-info media-item">
