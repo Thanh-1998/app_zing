@@ -15,7 +15,8 @@ const actions = {
       dispath({ type: constains.GET_DATA_RELEASE_ERROR })
       console.log(error);
     }
-  }
+  },
+
 }
 
 export default actions;

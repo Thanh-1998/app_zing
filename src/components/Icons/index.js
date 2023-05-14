@@ -10,3 +10,6 @@ export { default as IconSetting } from './IconSettings';
 export { default as IconTrend } from './IconTrend';
 export { default as IconMore } from './IconMore';
 export { default as IconDots } from './IconDots';
+export { default as IconActionPay } from './IconActionPlay';
+export { default as IconDirection } from './IconDirection';
+export { default as IconFavourite } from './IconFavourite';

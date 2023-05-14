@@ -1,6 +1,8 @@
 import React from "react";
-import Gallery from "./components/Gallery";
-import Release from "./components/Release";
+import Gallery from "./CompGallery/Gallery";
+import Release from "./CompRelease/Release";
+import Relax from "./CompRelax/Relax";
+import ChartNew from "./CompChart/ChartNew";
 
 const HomePage = () => {
   return (
@@ -9,6 +11,14 @@ const HomePage = () => {
 
       <section className="section">
         <Release />
+      </section>
+
+      <section className="section">
+        <Relax />
+      </section>
+
+      <section className="section">
+        <ChartNew />
       </section>
     </div>
   )

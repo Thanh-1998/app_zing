@@ -15,6 +15,8 @@
   --text-primary: #fff;
   --text-secondary: #ffffff80;
   --padding-section: 59px;
+  --alpha-50: rgba(0,0,0,0.5);
+  --color-white: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -155,24 +157,20 @@ section.section {
 
 h3.title {
   color: var(--text-primary);
+  margin: 0 0 20px;
 }
 
 .title.title-2 {
   font-size: 20px;
   padding: 0 10px;
 }
-
+.title-cate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .title-section {
-  position: relative;
   font-weight: 700;
-  margin: 0 0 20px;
-
-  & .discovery-link {
-    position: absolute;
-    right: 0;
-    bottom: -42px;
-  }
-
   & a {
     display: flex;
     align-items: center;
@@ -184,6 +182,15 @@ h3.title {
     & svg {
       margin-left: 6px;
     }
+  }
+}
+
+.title-tab {
+  position: relative;
+  & .discovery-link {
+    position: absolute;
+    right: 0;
+    bottom: -42px;
   }
 }
 
@@ -200,6 +207,14 @@ h3.title {
   border: 1px solid var(--border-primary);
   color: var(--text-primary);
   text-transform: uppercase;
+  &:hover {
+    filter: brightness(.9);
+  }
+  &.tab-selected {
+    background-color: var(--color-purple);
+    color: var(--color-purple);
+    color: var(--color-white);
+  }
 }
 
 .is60x60 {
@@ -252,4 +267,69 @@ h3.title {
     background-color: var(--bg-alpha);
     color: var(--navigation-text);
   }
+}
+
+figure.image-thumb {
+  line-height: 0;
+}
+
+.playlist {
+  margin: 0 -14px;
+  .item-playlist {
+    padding: 0 14px
+  }
+  & .card-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    & img {
+      width: 100%;
+      object-fit: cover;
+      transition: transform .7s
+    }
+    &:hover img {
+      transform: scale(1.1) translateZ(0);
+    }
+    &:hover .box-action {
+      display: flex;
+    }
+    & .box-action {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: none;
+      align-items: center;
+      background-color: var(--alpha-50);
+      z-index: 2;
+      & .action-playlist {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      & .item-action {
+        color: var(--text-primary);
+        padding: 5px
+      }
+    }
+  }
+
+  & .card-title {
+    font-size: 14px;
+    margin-top: 12px;
+    color: var(--text-secondary)
+  }
+  &-5 {
+    display: flex;
+    align-items: center;
+    .item-playlist {
+      width: calc(100% / 5);
+    }
+  }
+}
+.item-sub:not(.title-wrap) {
+  display: block;
 }

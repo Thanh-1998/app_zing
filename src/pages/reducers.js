@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 
-import homeReducer from './HomePage/reducer'
+import releaseReducer from './HomePage/CompRelease/reducer';
+import chartReducer from './HomePage/CompChart/reducer';
 
 const reducers = combineReducers({
-  homeReducer,
+  releaseReducer,
+  chartReducer
 });
 
 export default reducers;
