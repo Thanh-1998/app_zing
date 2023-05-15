@@ -71,8 +71,13 @@ const StyledHeader = styled.header`
   align-items: center;
   z-index: 10;
   padding: 0 var(--padding-section);
+  background-color: var(--bg-header);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 3px 5px var(--shadow-header);
   & .header {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
   }
@@ -113,7 +118,7 @@ const StyledHeader = styled.header`
         position: absolute;
         width: 100%;
         font-size: 14px;
-        top: -10px;
+        top: 50px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         overflow: hidden;
@@ -152,6 +157,7 @@ const StyledHeader = styled.header`
       }
       .wrap-settings {
         position: absolute;
+        top: 58px;
         right: 0;
         border-radius: 8px;
         padding-top: 2px;

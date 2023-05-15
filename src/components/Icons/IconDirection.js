@@ -1,11 +1,11 @@
-function IconDirection({ direction, fill }) {
+function IconDirection({ direction, fill, width, height }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
-      width="30px"
-      height="30px"
+      width={width ?? 30}
+      height={height ?? 30}
       viewBox="0 0 256 256"
       xmlSpace="preserve"
       fill={fill}

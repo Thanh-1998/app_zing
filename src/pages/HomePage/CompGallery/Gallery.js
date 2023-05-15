@@ -45,7 +45,7 @@ function Gallery() {
 
   return (
     <StyledGallery >
-      <div className="gallery" onMouseOver={handleMouse} onMouseLeave={handleMouseLeave}>
+      <div className="gallery wrapper-carousel" onMouseOver={handleMouse} onMouseLeave={handleMouseLeave}>
         {listSlider.map((slider, index) => {
           const name = ['gallery-first', 'gallery-second', 'gallery-third', 'gallery-four', 'gallery-five']
 
@@ -63,13 +63,13 @@ function Gallery() {
         })}
         <div className="nav-slider">
           <button
-            className="btn-slider btn-next"
+            className="btn-slider btn-next btn-55x55"
             onClick={handleNext}>
             <IconDirection direction='180' fill='#fff' />
           </button>
 
           <button
-            className="btn-slider btn-prev"
+            className="btn-slider btn-prev btn-55x55"
             onClick={handlePrev}>
             <IconDirection fill='#fff' />
           </button>

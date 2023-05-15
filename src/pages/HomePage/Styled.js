@@ -43,30 +43,6 @@ const StyledGallery = styled.div`
       opacity: 0;
       transform: translateX(100%)
     }
-    &:hover .btn-slider {
-      display: flex
-    }
-    .btn-slider {
-      position: absolute;
-      width: 55px;
-      height: 55px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      background-color: hsla(0,0%,100%,.15);
-      box-shadow: 0 2px 4px 0 rgba(226,102,102,.15);
-      border-radius: 50%;
-      z-index: 2;
-      &.btn-next {
-        right: 25px
-      }
-      &.btn-prev {
-        left: 25px
-      }
-    }
-  
   }
 `;
 
@@ -164,6 +140,78 @@ const StyledRelax = styled.div`
       }
     }
   }
-`
+`;
 
-export { StyledGallery, StyledRelease, StyledRelax };
+const StyleChartSlider = styled.div`
+  overflow: hidden;
+  & .wrapper-carousel {
+    position: relative;
+  }
+ & .chart-wrapper {
+  color: var(--text-primary);
+  margin: 0 -15px;
+  display: flex;
+  transition: transform .3s ease .1s;
+  width: 99999px;
+  & .chart-slider {
+    padding: 0 14px;
+    width:  390px;
+    & .chart-item {
+      background: var(--box-item);
+      padding: 15px;
+      display: flex;
+      border-radius: 4px
+    }
+    & .slider-image {
+      margin-right: 10px;
+      & .image {
+        border-radius: 5px;
+        overflow: hidden
+      }
+    }
+    & .slider-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & .title-info {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.38;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+      }
+      & .sub-title {
+        font-size: 12px
+      }
+      & .order-chart {
+        opacity: .4;
+        -webkit-text-stroke: 1px var(--color-white);
+        font-size: 40px;
+        font-weight: 900;
+        color: transparent;
+        line-height: 1;
+        font-family: "Roboto",sans-serif;
+      }
+    }
+    & .item-more {
+      font-size: 14px;
+      font-weight: 700;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      color: var(--color-purple);
+    }
+  }
+ }
+`;
+
+export {
+  StyledGallery,
+  StyledRelease,
+  StyledRelax,
+  StyleChartSlider
+};
