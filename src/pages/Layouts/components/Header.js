@@ -34,7 +34,7 @@ const menuSettings = [
         ></path>
       </svg>
     ),
-    menu_name: 'Giao diện',
+    menu_name: 'Giao diện'
   },
 ];
 
@@ -94,9 +94,16 @@ const Header = () => {
                       {menuSettings.map((menu) => (
                         <li className="settings-item popper-item" key={menu.id_menu}>
                           {menu.icon}
-                          <span className="settings-name popper-name">{menu.menu_name}</span>
+                          <span className="settings-name popper-name">
+                            {menu.menu_name}
+                          </span>
                         </li>
                       ))}
+                      <ul className='select-theme'>
+                        <li className='setting-theme'>
+                          <div className='heading-theme'>Chủ đề</div>
+                        </li>
+                      </ul>
                     </ul>
                   </FormPopper>
                 </div>

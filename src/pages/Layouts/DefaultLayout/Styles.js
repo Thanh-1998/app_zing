@@ -159,13 +159,27 @@ const StyledHeader = styled.header`
         position: absolute;
         top: 58px;
         right: 0;
-        border-radius: 8px;
         padding-top: 2px;
-        overflow: hidden;
         color: var(--navigation-text);
+        & .wrapper {
+          border-radius: 8px;
+        }
       }
       .settings-list {
         padding: 6px;
+      }
+      & .select-theme {
+        position: absolute;
+        left: calc(-100% + 10px);
+        top: 42px;
+        width: 100%;
+        padding: 6px;
+        border-radius: 8px;
+        background-color: var(--bg-purple);
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+        & .setting-theme {
+          padding: 8px 12px
+        }
       }
     }
     & .icon-header {
