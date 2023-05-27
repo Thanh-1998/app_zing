@@ -14,4 +14,21 @@ const imageRelax = {
   chill_5: require('./chill-5.jpg'),
 }
 
-export { images, imageRelax };
+const bgTheme = {
+  iu: require('./iu.jpg'),
+  jennie: require('./jennie.jpg'),
+  jisoo: require('./jisoo.jpg'),
+  lisa: require('./lisa.jpg'),
+  rose: require('./rose.jpg'),
+  london: require('./london.jpg'),
+  eiffel: require('./eiffel.jpg'),
+  iu_thumb: require('./iu-thumb.jpg'),
+  jennie_thumb: require('./jennie-thumb.jpg'),
+  jisoo_thumb: require('./jisoo-thumb.jpg'),
+  lisa_thumb: require('./lisa-thumb.jpg'),
+  rose_thumb: require('./rose-thumb.jpg'),
+  london_thumb: require('./london-thumb.jpg'),
+  eiffel_thumb: require('./eiffel-thumb.jpg'),
+}
+
+export { images, imageRelax, bgTheme };
