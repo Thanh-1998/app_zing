@@ -38,7 +38,7 @@ function ItemRelax() {
                 </div>
               </div>
             </div>
-            <h3 className="card-title">
+            <h3 className="card-title title-hidden-2">
               <span className="item-sub">{title}</span>
             </h3>
           </div>

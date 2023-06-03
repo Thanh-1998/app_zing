@@ -35,7 +35,6 @@ function ChartNew() {
     setTranslate(prevTranslate => (prevTranslate - 390 + (390 * 5)) % (390 * 5));
   };
 
-  console.log(data);
   return (
     <>
       <h3 className="title-section title title-2 title-cate">

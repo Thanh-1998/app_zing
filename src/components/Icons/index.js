@@ -13,3 +13,4 @@ export { default as IconDots } from './IconDots';
 export { default as IconActionPay } from './IconActionPlay';
 export { default as IconDirection } from './IconDirection';
 export { default as IconFavourite } from './IconFavourite';
+export { default as IconClose } from './IconClose';

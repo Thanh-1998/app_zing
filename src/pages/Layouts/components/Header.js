@@ -1,4 +1,5 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
@@ -7,6 +8,8 @@ import { ButtonIcon } from '~/components/CustomForm';
 import { IconArrow, IconDesktop, IconSetting, IconVip } from '~/components/Icons';
 import FormPopper from '~/components/CustomData/FormPopup';
 import FormSearch from './FormSearch';
+import FormTheme from './FormTheme';
+
 
 const menuSettings = [
   {
@@ -39,6 +42,7 @@ const menuSettings = [
 ];
 
 const Header = () => {
+  const dispatch = useDispatch();
   // Kiểm tra hệ điều hành
   //const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const isWindows = navigator.platform === 'Win32' || navigator.platform === 'Win64';
@@ -50,13 +54,23 @@ const Header = () => {
 
   const [showSetting, setShowSetting] = useState(false);
 
-  const handleShowSetting = useCallback(() => {
+  const handleShowSetting = () => {
     setShowSetting((prevShowSetting) => !prevShowSetting);
-  }, []);
+  };
 
-  const handleHideSetting = useCallback(() => {
+  const handleHideSetting = () => {
     setShowSetting(false);
-  }, []);
+  };
+
+  const handleOpen = () => {
+    dispatch({
+      type: `OPEN_MODAL`,
+      payload: {
+        title: `Giao diện`,
+        component: <FormTheme />
+      }
+    })
+  }
 
   return (
     <StyledHeader>
@@ -98,12 +112,16 @@ const Header = () => {
                             {menu.menu_name}
                           </span>
                         </li>
+
                       ))}
                       <ul className='select-theme'>
-                        <li className='setting-theme'>
+                        <li className='setting-theme' onClick={handleOpen}>
                           <div className='heading-theme'>Chủ đề</div>
                           <div className='content-theme'></div>
                         </li>
+                        <div className='current-theme'>
+
+                        </div>
                       </ul>
                     </ul>
                   </FormPopper>
