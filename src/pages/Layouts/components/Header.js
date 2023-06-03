@@ -102,6 +102,7 @@ const Header = () => {
                       <ul className='select-theme'>
                         <li className='setting-theme'>
                           <div className='heading-theme'>Chủ đề</div>
+                          <div className='content-theme'></div>
                         </li>
                       </ul>
                     </ul>
