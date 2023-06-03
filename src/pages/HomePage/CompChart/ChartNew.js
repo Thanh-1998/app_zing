@@ -7,7 +7,7 @@ import ItemChart from "./ItemChart";
 import { StyleChartSlider } from "../Styled";
 
 function ChartNew() {
-  const { isLoadingPage, data } = useSelector(state => state.chartReducer)
+  const { data } = useSelector(state => state.chartReducer)
   const dispatch = useDispatch();
 
   useEffect(() => {
